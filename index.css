@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#nav {
+    background-color: rgb(77, 78, 78);
+    opacity: 0.8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#navlogo {
+    background-image: url("https://s3-alpha-sig.figma.com/img/381e/5b3e/71d18ff9b621f922919da3c4ed47ab4c?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KHKpH5HGB1A-f-j8ZyYa5JV7LzAwzOczo9ET34SE1J9UENx5FnI1UOLKEDi4GBdZ~z2-y1EbVnDAmJP3wFcF8rLa4IBiNsurcAwAJU7SU1LhxUOam22Od3WeT3JI-tw8eKqURWk8sdFmoxaeeUCDOKV52izq8hMCvD-Jv15RCHZ08cbzwRd~cAjwXDQy49132xXYrcuKCuzygU-OaY0WwWa4fHBWN3i1ZAJit8u6RKr6uVffi0M1P5Iu2aSe~R0yhGSLLfnaKDJ7B0yJiZZ2nM8wBJTEm1SVPObitwn~EmaOGXBcB2SLwwZ88khkNVjhqxFziVg5f56pym~5ilOP2Q__");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 20px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+#buttondiv {
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#buttondiv button {
+    border: none;
+    color: black;
+    font-weight: 500;
+    background-color: aqua;
+}
+
+.maindiv {
+    background-image: url("https://s3-alpha-sig.figma.com/img/03c6/e378/2bd98aaabd6b33de6d0ff79d4f7c6415?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OMuRP1P96cQu45WsGREtEPnuTvb-KHMvF8bEN7XVUaJuBP00KiKEJHcMjddnfrYlKK5YPv3j8CpYgLRQ7rqH8uq~gJVmcDjgpIeNEg9HgzOGvS0lIGPoON53o6a4jWBTINGPSXfJw8x92qRhwsNjgInZadZ-exENLCwO8v2~PFX7zw2a3tgJGTDI6jcR4fCibUrkFCtp~2dRBN0z2j0hoTbTdXCxeK1MEwbLFIOX8EJL08YzPrFrHMy3E6qpWvEyrMeNzKdW2c~Qthh7AxSGHTKyFvu~INgSzE0NPDJQI8r5I80Uf--8zzT75QsW4ybIptdPMIWFqbpeSLswyu6mpQ__");
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    position: relative;
+}
+
+#h1 {
+    color: white;
+    font-weight: 600;
+    margin-top: 150px;
+    margin-left: 100px;
+    position: absolute;
+    top: 100px;
+}
+
+.text {
+    color: white;
+    position: absolute;
+    top: 350px;
+    left: 120px;
+}
+
+#readmore {
+    border: none;
+    color: black;
+    font-weight: 500;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 390px;
+    left: 100px;
+}
+
+#readmore i {
+    margin-left: 10px;
+}
+
+.divair {
+    background-color: aqua;
+    width: 270px;
+    height: 230px;
+    padding: 15px;
+    position: absolute;
+    top: 240px;
+    right: 1px;
+}
+
+.cupdiv {
+    background-color: rgb(0, 0, 0);
+   width: 270px;
+    height: 230px;
+    padding: 15px;
+    position: absolute;
+    color: white;
+    top: 470px;
+    right: 270px;
+}
+
+#section1 {
+    background-color: white;
+    display: flex;
+   
+}
+
+#section1 h2 {
+    font-weight: 800;
+}
+#paradiv{
+    width: 60%;
+    
+}
+
+#mapdiv {
+   width: 40%;
+    background-color: aqua;
+    background-image: url("https://s3-alpha-sig.figma.com/img/9f51/3382/25b8f8ed7ad47ec49daebf85502c1b42?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nGeinljwhzUF~KKV7XmuDBkb6AT7NruJkg1dWkC0H4VkzHkgVYsVEBSoF8pKk3pQOykzSdQQB5FsruO82JRAV92wLGDxWxAiSsfoKU4TpL~71tXrTOcnZW08fpXn8v~9YPkgt8QPNtcyAXXpo~SGODYdLTUYhNSRyKu8A0RhJNnc~UyVGLmyBQDQK-Sde3kb22FuKW1edoypsHhYw69CiO1u-WGmimN0pZUmHwQecHYekcp~qxLIFwg8EPjQJtUBLgHcNtYt2ZVr7q0-aiJHEiGBoFFcweHv5WmuqS3YqZewqN3bKpG226~O~krz-gnK23lZw~s9gcS9QqTxtqQhew__");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+  
+}
+
+#one, #two, #three {
+    height: 250px;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#one {
+    float: right;
+    background-image: url("https://s3-alpha-sig.figma.com/img/2e04/cbcb/39c4164624822496f9756aab8b11ba12?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=dVpL91ESV09zpCp9wbyGcnhppf~SIBrBGOHVc8vCUtqykrPmRw~EH39gohpu9bTEZayUBx0qZ0u3RqMPYyBWLiXTX2XW~kGVJpcsLM1LIdgcq-hmIWboUTaQ3h3cE52iBjV~az0jzuPagWOQ3TS0Slzp22CzRlTd9nlp0DZb8WPVUqa7rp16S8lldz9u0eI0i~S638X0KwH84SIng22mU2mPFUHYZRHJNyyswxHx82-wWMDz0m~b9YmIJP37zCpbTlOmKjtKAO-wtCKHF3X6Fh-8heVKnpvNyJ6STjAGQvEJYJIHnMnFrgln3uw4cYxmPFioN8q~lT84fMbDGmE8KA__");
+}
+
+#two {
+    margin-top: 250px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+#three {
+    float: right;
+    background-image: url("https://s3-alpha-sig.figma.com/img/693e/ba01/afeed44b4308b790c66207729866b16e?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=okira0-h7MeyZvGmq-loOBgD25iwbn792wtGIM~joC2SzSB~y3hhAglhDDklnWRN1ExBa~MCaB9Pexsu4mtIyvZGl9sXSjZTLFPorg~4p3fZqI~iW1rAggE-T9corPN92mJgdYTePqPFZYejQinxwR~fU-rXkXfXEi7WoWCQk6-~GFwHvD8-spRdVNReTNFAUn2XksORRJO6YozseW2EEqeqnsDtcNlFNBi4j6mIMVd4meWg5Fv2Ea9p~KUfNnQ0lcv1VhF5WN2QzAkDybIS8zcMgF4Lu37MrbXfk-957fh55ynPPrlvJpl-LmjWWV3q-1jHCCyE5vcpUT40--u1IA__");
+    
+}
+
+#section-2{
+  
+   padding: 100px;
+   background-image: url("https://s3-alpha-sig.figma.com/img/7b49/d99e/d503fb456e1f2b12cf0c1af716246063?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WZ526pVQhJtm-lpj8kJzL5xwqovYuWGNyUzwJ3S0gjiI3abnqA0gZJl7PMobPijrI9EMDTJxFJvc-QrzbpgKWU1Tr8NiQ69cCUmiZaC9GcamdeQQzBwlyL3uINqODIPAcD6vSZ-lydbfngj1FdB3N3NPpBtGrgF9DoJYwtL1Kji0Pd4I4f0y0Gd6bWg8ypqyorywnmx1-bAcGTnMuyn6gSVqU3yBLj5jiSfXDPZIYgj8yoUUA8xWUeM4rMxkR2oeKqtkEGPe83diB3RahB2H766uDBcXf20bZylaYJ1xPmnOCPwivTmzT-BTfTzIdl2lJAucriV1wlTxn4~f1pGrIg__");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-color: rgb(20, 19, 22);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: white;
+    height: 250px;
+    padding: 20px;
+    border-radius: 5px;
+    width: 270px;
+}
+.grid-item2{
+    height: 250px;
+    width: 270px;
+    background-image: url("https://s3-alpha-sig.figma.com/img/a3e3/4075/b67765aed5848c7296fcff0b6a58ec0a?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=XvXrHV6KajVN8nH3nrgK2NhRD65VlVefHV3M2bIQiYdG48UHELKeeMqWStiaaFJ~qb0ochcBjnW9Jc2T8OA9AAuoNjB5i8SL8XjJgEBuphsZ7KFVYBaJ4xijng7kdlrqvG8XX3oxuhIpWbRUQlhZYrttEMsya~5bf7M7DlvPxdYh1heoAR3HoEvyAI9y6CvL1y~eS1Qdz~iX7hBb4vYF1Q9e-Fl5ThT~bOOJpGYbscJQVsDcWM0sTXjBM5y4jMik0Ee8QI~6rSBQj4VHqrIQJeqs29WzaytHO6dvHGmyA4TT-gQOAYEMBYrPR4rhvQ2jLhYOgd7M-0qj-IBbAVB0yA__");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+.divgraph{
+    height: 150px;
+    background-image: url("https://s3-alpha-sig.figma.com/img/d6a0/f05f/96f0ace98aee3775747bcbdc370cbd9e?Expires=1717372800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NcS~sfbIca7iEuJZUiQSDnrQ01OAgrNvxSrl5r5cDz9ez52N0FdP4h3Es5FoPM7SgeeOeUlmReH4ltHW9u181WmV6j2HEOi9AcUheMrtb2Y8jVQS7FtGvarjYnu~pzTAmvAsx6miZAQzcEexiNCZc54uogHK4BuAMZzHc9WUNN5ylLGiQZQQhPe6Cew5~WPMlCo3eK~1mjB77zZDsk3tGkboRvsVBJT6Fc-1PrS-Wn5fIG18UkXp787-v-0IMG8dj7G796nD9WIpkmrHfMnV-7FGONYfBSgu89UnpMJZbToABiyRmughyMw65c8gWq-xyySjO6yPgyaf-S8undnHnQ__");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navlogo {
+        margin-bottom: 20px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .maindiv {
+        height: auto;
+        padding: 10px;
+    }
+
+    #h1, .text, #readmore, .divair, .cupdiv {
+        position: static;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #section1 {
+        flex-direction: column;
+    }
+
+    #one, #two, #three {
+        width: 50%;
+        margin: 10px 0;
+    }
+    #two{
+        margin-top: 250px;
+    }
+    #paradiv{
+       width: 100%;
+    }
+    #mapdiv {
+        width: 100%;
+     }
+     .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+@media screen and (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
