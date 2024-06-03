@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Photo Creator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .controls input {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Passport Photo Creator</h1>
+    <div class="controls">
+        <input type="file" id="backgroundUpload" accept="image/*"><br>
+        <input type="file" id="imageUpload" accept="image/*"><br>
+        <input type="text" id="nameInput" placeholder="Enter your name"><br>
+        <button id="downloadButton">Download A4 Sheet</button>
+    </div>
+    <canvas id="canvas" width="595" height="842"></canvas> <!-- A4 size in pixels (72 DPI) -->
+    <script>
+        const backgroundUpload = document.getElementById('backgroundUpload');
+        const imageUpload = document.getElementById('imageUpload');
+        const nameInput = document.getElementById('nameInput');
+        const downloadButton = document.getElementById('downloadButton');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let uploadedImage = new Image();
+        let backgroundImage = new Image();
+        let imageUploaded = false;
+        let backgroundUploaded = false;
+
+        backgroundUpload.addEventListener('change', handleBackgroundUpload);
+        imageUpload.addEventListener('change', handleImageUpload);
+        downloadButton.addEventListener('click', downloadA4Sheet);
+
+        function handleBackgroundUpload(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                backgroundImage.src = e.target.result;
+                backgroundImage.onload = function() {
+                    backgroundUploaded = true;
+                    drawImageAndText(); // Draw to show placeholder
+                }
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                uploadedImage.src = e.target.result;
+                uploadedImage.onload = function() {
+                    imageUploaded = true;
+                    drawImageAndText(); // Draw image when uploaded
+                }
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function drawImageAndText() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (backgroundUploaded) {
+                // Draw background image
+                ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
+            }
+
+            // Define increased passport photo placeholder size and position
+            const passportWidth = 178; // Adjust this value for desired width
+            const passportHeight = 227; // Adjust this value for desired height
+            const xOffset = 90; // Adjust this value to move the placeholder horizontally
+            const yOffset = 410; // Adjust this value to move the placeholder vertically
+            const xPos = xOffset;
+            const yPos = yOffset;
+
+            // Draw placeholder if image not uploaded
+            if (!imageUploaded) {
+                ctx.strokeStyle = 'red';
+                ctx.strokeRect(xPos, yPos, passportWidth, passportHeight);
+            } else {
+                // Draw uploaded image in placeholder
+                ctx.drawImage(uploadedImage, xPos, yPos, passportWidth, passportHeight);
+            }
+
+            // Draw the name below the image with styling and margin from top
+            ctx.font = '24px Arial'; // Font size and family
+            ctx.fillStyle = 'rgb(7, 6, 6)'; // Text color (blue in this example)
+            ctx.textAlign = 'center'; // Text alignment
+            const textMarginTop = 70; // Adjust this value to set the margin from top
+            ctx.fillText(nameInput.value, xPos + passportWidth / 2, yPos + passportHeight + textMarginTop);
+        }
+
+        function downloadA4Sheet() {
+            if (backgroundUploaded && imageUploaded) {
+                drawImageAndText(); // Ensure the canvas is updated
+                const link = document.createElement('a');
+                link.download = 'passport_photo_a4_sheet.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            } else {
+                alert('Please upload both background and passport images.');
+            }
+        }
+    </script>
+</body>
+</html>
